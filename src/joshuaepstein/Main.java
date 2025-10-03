@@ -1,10 +1,13 @@
 package joshuaepstein;
 
+import joshuaepstein.budget.BudgetManager;
+
 public class Main {
 
     public static void main(String[] args) {
-        // TODO
-        System.out.println("Welcome to this amazing project :)");
+        BudgetManager manager = new BudgetManager();
+        ConsoleMenu menu = new ConsoleMenu(manager, new java.util.Scanner(System.in));
+        menu.start();
     }
 
 }
